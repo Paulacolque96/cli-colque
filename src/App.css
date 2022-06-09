@@ -2,18 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/*
-.App {
+.cart-widget {
+  position: relative;
+  cursor: pointer;
   text-align: center;
 }
-.App-header {
-  background-color: #59080F;
-  min-height: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}*/
+.numero-shop {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 15px;
+  position: absolute;
+  text-align: center;
+  line-height: 18px;
+}

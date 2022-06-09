@@ -1,17 +1,5 @@
-/*function NavBar() {
-    return(
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Shop</li>
-                <li>Ocasion</li>
-                <li>Contacto</li>
-            </ul>
-        </nav>
-    )
-}
+import CartWidget from "./CartWidget.jsx";
 
-export default NavBar*/
 function NavBar() {
     return(
     <nav className="flex items-center justify-between flex-wrap bg-teal-900 p-6 app-header">
@@ -36,6 +24,7 @@ function NavBar() {
       </a>
     </div>
   </div>
+  <CartWidget/>
 </nav>
     )
 }
