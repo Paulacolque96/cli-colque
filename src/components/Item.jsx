@@ -1,12 +1,15 @@
-const Item = ({name, description, price}) => {
+import {Link} from 'react-router-dom';
+
+const Item = ({name, img, id}) => {
+    const urlDetalle = `/detail/${id}`
     return (
-        <>
-            <div>
-                <h2>{name}</h2>
-                <h4>{description}</h4>
-                <h5>${price}</h5>
-            </div>    
-        </>
+        <div className="mb-5 py-3 itemlist-card text-center" key={id}>
+            <img className="itemlist-card-img" src={img} alt={name} />
+            <h2 className="text-3x1 text-zinc-100 mt-2 mb-4 font-medium title-font">{name}</h2>
+            <Link to={urlDetalle}>
+                <button>Tomar</button>
+            </Link>
+        </div>
     )
 }
 

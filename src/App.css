@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.App {
+  background-color: #18181b;
+  color: azure;
+}
 .cart-widget {
   position: relative;
   cursor: pointer;

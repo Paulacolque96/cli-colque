@@ -2,7 +2,7 @@ import Item from "./Item"
 
 const ItemList = ({articulos}) => {
     return (
-        <div>
+        <div className="flex justify-around flex-wrap">
             {articulos.map((articulos) => (
                     <Item key={articulos.id}{...articulos}/>
             ))}

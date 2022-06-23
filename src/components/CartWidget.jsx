@@ -5,7 +5,7 @@ function CartWidget() {
     return(
         <div className="cart-widget">
         
-        <FontAwesomeIcon icon={faWineGlass} size="2x" color="white" />
+        <FontAwesomeIcon icon={faWineGlass} size="2x" color="red" />
       
     </div>
     )
