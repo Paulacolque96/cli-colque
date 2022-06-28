@@ -11,7 +11,7 @@ function ItemDetailContainer(props) {
     useEffect(() => {
         const traerProducto = new Promise ((resolve, reject) => {
             setTimeout(() => {
-                let idNum = parseInt(id)
+                let idNum = parseInt(idNum)
                 const idFound = productos.find( vino =>{
                     return vino.id === idNum 
                 } )

@@ -27,7 +27,7 @@ function ItemListContainer(props) {
     
     return(
         <div className="text-center container mx-auto mt-5">
-            <div className="font-bold text-zinc-100 text-4x1 mb-2">{props.greet}</div>
+            <div className="font-bold text-red-700 text-4x1 mb-2">{props.greet}</div>
             <ItemList articulos={products}/>
             <a href="/detail">ir a detalle del producto</a>
         </div>
