@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { productos } from "../mock/productos";
 import ItemList from "./ItemList";
 
@@ -7,11 +8,19 @@ import ItemList from "./ItemList";
 function ItemListContainer(props) {
 
     const [products, setProducts] = useState ([]);
+    const {categoryId} = useParams();
 
     useEffect(() => {
         const traerProductos = new Promise ((resolve, reject) => {
             setTimeout(() => {
-                resolve(productos);
+                if (categoryId === undefined)
+                    resolve(productos);
+                else {
+                   const itemsFound = productos.filter( vino =>{
+                    return vino.category === categoryId;
+                   })
+                   resolve(itemsFound)
+                }
             }, 2000);
         });
 
@@ -23,13 +32,12 @@ function ItemListContainer(props) {
                 console.log(reject);
             });
 
-    }, []);
+    }, [categoryId]);
     
     return(
-        <div className="text-center container mx-auto mt-5">
-            <div className="font-bold text-red-700 text-4x1 mb-2">{props.greet}</div>
+        <div className="text-center container mx-auto">
+            <div className="font-bold text-red-700 text-4x1">{props.greet}</div>
             <ItemList articulos={products}/>
-            <a href="/detail">ir a detalle del producto</a>
         </div>
     )
 }
