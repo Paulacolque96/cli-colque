@@ -14,7 +14,7 @@ function ItemCount({stock, initial, onAdd}) {
             <button disabled={count <= 1} onClick={resta} className="text-white bg-red-700 px-4 py-2 rounded hover:bg-red-600">-</button>
             <span className="m-5" x-text="count">{count}</span>
             <button disabled={count >= stock} onClick={suma} className="text-white bg-red-700 px-4 py-2 rounded hover:bg-red-600">+</button>
-            <button onClick={onAdd} className="text-white bg-red-700 px-4 py-2 rounded hover:bg-red-600">Agregar al carrito</button>
+            <button onClick={()=>onAdd(count)} className="text-white bg-red-700 px-4 py-2 rounded hover:bg-red-600">Agregar al carrito</button>
         </div>
     )
 }
