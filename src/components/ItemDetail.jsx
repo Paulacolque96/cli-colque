@@ -23,7 +23,7 @@ function ItemDetail({item}) {
             {
               cant === 0
                 ? <ItemCount onAdd={onAdd} stock={10} initial={1} />
-                : <Link to="/">Ir al carrito</Link>
+                : <Link to="/Cart">Ir al carrito</Link>
             }
         </div>
     )

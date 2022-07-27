@@ -1,10 +1,11 @@
+import React, { useState } from 'react'
 import Item from "./Item"
 
-const ItemList = ({articulos}) => {
+const ItemList = ({items}) => {
     return (
         <div className="flex justify-around flex-wrap">
-            {articulos.map((articulos) => (
-                    <Item key={articulos.id}{...articulos}/>
+            {items.map((items) => (
+                    <Item key={items.id}{...items}/>
             ))}
         </div>
     )
